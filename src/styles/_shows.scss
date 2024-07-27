@@ -1,0 +1,42 @@
+@use 'variaveis';
+
+.shows {
+  padding: 0 5.6vw;
+  min-height: 45vw;
+
+  &__list {
+    margin-top: 18px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+
+    &__item {
+      cursor: pointer;
+      overflow: hidden;
+
+      img {
+        overflow: hidden;
+        max-width: 100%;
+        border-radius: 4px;
+        transition: transform 0.3s ease-out;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+
+  &__title {
+    color: variaveis.$corTextoPrincipal;
+    margin-top: 16px;
+
+    @media (max-width: 768px) {
+      font-size: 16px;
+    }
+  }
+}

@@ -1,0 +1,81 @@
+@use 'variaveis';
+
+.hero {
+  margin-top: -100px;
+  padding: 5.6vw;
+  background: linear-gradient(transparent, #1a1d29),
+    url(../images/background-frozen-2.png);
+  background-size: cover;
+
+  @media (max-width: 768px) {
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: -60px;
+  }
+
+  .button {
+    margin-top: 26px;
+
+    @media (max-width: 768px) {
+      height: 40px;
+      font-size: 15px;
+      padding: 9px 12px;
+    }
+  }
+
+  &__content {
+    max-width: 860px;
+
+    &__branding {
+      padding: 90px 0 12px;
+      max-width: 340px;
+
+      img {
+        width: 100%;
+      }
+
+      @media (max-width: 768px) {
+        max-width: 120px;
+        padding: 60px 0 40px;
+      }
+    }
+
+    &__details {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      text-align: center;
+
+      img {
+        height: 20px;
+      }
+    }
+
+    p {
+      margin-bottom: 18px;
+
+      &:last-child {
+        margin-top: 18px;
+      }
+    }
+
+    &__assign {
+      @media (max-width: 768px) {
+        display: block;
+      }
+
+      &__button {
+        width: calc(50% - 12px);
+
+        @media (max-width: 768px) {
+          width: 100%;
+          margin-bottom: 24px;
+        }
+
+        img {
+          max-height: 60px;
+        }
+      }
+    }
+  }
+}
